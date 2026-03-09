@@ -1,0 +1,26 @@
+# --- Segurança (NUNCA DEIXE ISSO SUBIR) ---
+.env
+*.db
+pantero_dados.db
+*.session
+*.log
+crash_log.txt
+config.json
+
+# --- Node / Frontend (Ignora pastas pesadas) ---
+node_modules/
+.next/
+out/
+build/
+
+# --- Tauri (Ignora compilação do desktop) ---
+src-tauri/target/
+
+# --- Python / Backend (Ignora arquivos temporários) ---
+__pycache__/
+*.py[cod]
+venv/
+api.build/
+api.dist/
+robo_pro.build/
+robo_pro.dist/

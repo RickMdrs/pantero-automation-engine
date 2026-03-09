@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+psutil
+python-dotenv
+requests
+selenium
+webdriver-manager
+pywin32
+telethon
+httpx
+pillow
+pyperclip
