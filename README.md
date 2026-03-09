@@ -1,5 +1,9 @@
 # 🐾 Pantero IA: Enterprise Affiliate Automation Engine
 
+
+https://github.com/user-attachments/assets/2dcdd87a-e8f9-4b8f-9222-b42d0bd32fe2
+
+
 ## 📌 Project Overview & Business Impact
 Pantero IA is a high-performance B2B SaaS (Software as a Service) developed specifically for the Brazilian digital marketing ecosystem. It solves a critical bottleneck for promotional group managers: the manual generation and distribution of affiliate links. 
 
