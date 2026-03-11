@@ -9,7 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import json
 
 driver_config = None
-# Blindagem absoluta: garante que o JSON sempre vai pra PanteroIA_Dados
+
 ARQUIVO_STATUS = os.path.join(os.getenv('LOCALAPPDATA'), "PanteroIA_Dados", "status_conexoes.json")
 NOME_PERFIL_MASTER = "perfil_master"
 
@@ -38,7 +38,7 @@ def abrir_navegador_especifico(servico):
     
     caminho_base = os.path.join(os.getenv('LOCALAPPDATA'), "PanteroIA")
     caminho_perfil = os.path.join(caminho_base, "conexoes", NOME_PERFIL_MASTER)
-    # Correção extra: Evita erro de permissão do arquivo de log interno do Chrome
+   
     caminho_log_driver = os.path.join(caminho_base, "chromedriver.log") 
     
     if not os.path.exists(os.path.join(caminho_base, "conexoes")):
@@ -64,7 +64,7 @@ def abrir_navegador_especifico(servico):
         
     except Exception as e:
         salvar_status_individual(servico, False)
-        # A MÁGICA DA CAIXA PRETA: Gera um TXT na Área de Trabalho com o erro letal
+      
         try:
             caminho_erro = os.path.join(os.path.expanduser("~"), "Desktop", "ERRO_PANTERO.txt")
             with open(caminho_erro, "w", encoding="utf-8") as f:
@@ -89,7 +89,7 @@ def limpar_sessao_whatsapp():
     options.add_argument("--disable-dev-shm-usage")
     
     try:
-        # Aplica blindagem de porta e log para não travar
+    
         servico_chrome = Service(ChromeDriverManager().install(), log_path=caminho_log)
         servico_chrome.creation_flags = 0x08000000
         
@@ -124,7 +124,7 @@ def desconectar_servico(servico):
     # 1. Avisa pro Painel IMEDIATAMENTE que desligou (Salva no JSON)
     salvar_status_individual(servico, False)
     
-    # 2. BAZUCA: Mata o robô e qualquer Chrome travado para DESTRAVAR o perfil!
+
     if os.name == 'nt':
         os.system("taskkill /F /IM robo_pro.exe >nul 2>&1")
         os.system("taskkill /F /IM robo_pro-x86_64-pc-windows-msvc.exe >nul 2>&1")
@@ -133,10 +133,10 @@ def desconectar_servico(servico):
     
     time.sleep(1.5) # Dá tempo pro Windows soltar os arquivos fisicamente
     
-    # 3. Fecha o navegador de setup (se houver)
+   # Fecha o navegador de setup (se houver)
     fechar_navegador()
     
-    # 4. Agora que a porta está destrancada, faz a limpeza!
+
     if servico == "whatsapp":
         limpar_sessao_whatsapp()
         
