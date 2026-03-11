@@ -1,3 +1,19 @@
+# ==============================================================================
+# ⚠️ COPYRIGHT & SECURITY NOTICE - PANTERO IA
+# ==============================================================================
+# This file is a LIMITED DEMONSTRATION VERSION intended strictly for portfolio 
+# and educational display. 
+# 
+# The full Pantero IA software includes advanced Anti-Ban algorithms, 
+# stealth execution (Ghost Mode), proprietary HWID licensing protocols, 
+# and encrypted local payload management which have been INTENTIONALLY REMOVED 
+# from this public repository to protect the commercial integrity of the SaaS.
+# 
+# © 2026 RyK Medeiros (Pantero IA). All Rights Reserved.
+# Unauthorized reproduction, distribution, or commercial use of this architecture
+# is strictly prohibited.
+# ==============================================================================
+
 import os
 import traceback
 import shutil
